@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(to bottom, #ffeaf5, #e1f1fd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.calendar-container {
+  margin-top: 30px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #ff3399;
+  font-size: 14px;
+  text-align: left;
+}
+
+.month {
+  font-size: 16px;
+  color: #000;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.weekdays, .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  font-size: 10px;
+}
+
+.weekdays div {
+  text-align: center;
+  color: #a67c52;
+}
+
+.weekdays .weekend {
+  color: orange;
+}
+
+.day {
+  background-color: #dbeeff;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  color: #a67c52;
+  position: relative;
+  transition: transform 0.1s;
+}
+
+.day.weekend {
+  color: orange;
+}
+
+.day:active {
+  background-image: url('paw.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  transform: scale(0.95);
+}
+
+.popup {
+  position: absolute;
+  background-color: white;
+  border: 2px solid pink;
+  padding: 8px;
+  border-radius: 10px;
+  display: none;
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  max-width: 60%;
+  z-index: 10;
+}
+
+.bottom-deco {
+  width: 60px;
+  position: absolute;
+  bottom: 15px;
+}
+
+.cat {
+  left: 20px;
+}
+
+.plant {
+  right: 20px;
+}
